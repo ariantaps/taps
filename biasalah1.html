@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Counter</title>
+</head>
+<body>
+	<button id="sub"><h5>-</h5></button>
+	<input type="text" id="qtyBox" readonly="" value="0">
+	<button id="add"><h5>+</h5></button>
+	<script type="text/javascript">
+		let taps = document.querySelector('#add');
+		let tips = document.querySelector('#sub');
+		let qty = document.querySelector('#qtyBox');
+		
+		taps.addEventListener('click',()=>{
+			qty.value = parseInt(qty.value) + 1;
+		});
+
+		tips.addEventListener('click',()=>{
+			if (qty.value <= 0) {
+				qty.value = 0;
+			}
+			else{
+				qty.value = parseInt(qty.value) - 1;
+			}
+		});
+
+	</script>
+</body>
+</html>
+
+</body>
+</html>
